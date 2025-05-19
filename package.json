@@ -1,8 +1,22 @@
 {
   "name": "rvui",
   "private": true,
-  "version": "0.0.0",
+  "version": "0.1.1",
   "type": "module",
+  "files": [
+    "dist"
+  ],
+  "main": "./dist/rvui.cjs",
+  "module": "./dist/rvui.js",
+  "exports": {
+    ".": {
+      "import": "./dist/rvui.js",
+      "require": "./dist/rvui.umd.cjs"
+    },
+    "./dist/style.css": "./dist/style.css"
+  },
+  "sideEffects": false,
+  
   "scripts": {
     "dev": "vite",
     "build": "tsc -b && vite build",
