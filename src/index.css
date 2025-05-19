@@ -1,0 +1,61 @@
+@import 'tailwindcss';
+@import 'tailwindcss';
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+html {
+    font-family: "Chocolate Classical Sans", sans-serif !important;
+    background-color: #EEEEEF;
+}
+
+.dark {
+    background-color: #030712;
+    color: #EEEEEF;
+}
+
+
+@layer base {
+    .dark {
+        *,
+        ::after,
+        ::before,
+        ::backdrop,
+        ::file-selector-button {
+            border-color: #282C35;
+        }
+    }
+
+    *,
+    ::after,
+    ::before,
+    ::backdrop,
+    ::file-selector-button {
+        border-color: var(--color-gray-200, currentColor);
+    }
+}
+
+@theme {
+    --color-primary-main: #1a50e4;
+    --color-primary-dark: #1b3fb2;
+    --color-primary-light: #2162ef;
+    --color-base-background: #030712;
+    --color-card: #10141E;
+
+    --color-primary-50: #eff6ff;
+    --color-primary-100: #daeaff;
+    --color-primary-200: #bedbff;
+    --color-primary-300: #91c6ff;
+    --color-primary-400: #5da6fd;
+    --color-primary-500: #3782fa;
+    --color-primary-600: #2162ef;
+    --color-primary-700: #1a50e4;
+    --color-primary-800: #1b3fb2;
+    --color-primary-900: #1c3a8c;
+    --color-primary-950: #162455;
+
+
+    --spacing-sidebar-width: 339px;
+    --spacing-top-bar-height: 60px;
+    --spacing-top-home-height: 120px;
+    --spacing-field-height: 34px;
+}
